@@ -6,7 +6,7 @@
 #    By: thansen <thansen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/08 16:29:59 by thansen           #+#    #+#              #
-#    Updated: 2019/05/08 16:29:59 by thansen          ###   ########.fr        #
+#    Updated: 2019/05/09 17:41:19 by thansen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ $(LIBFT):
 	@make -C libft
 
 $(NAME): $(OBJ_DIR) $(LIBFT) $(OBJS)
-	@$(CC) $(FLAGS) -o $(NAME) $(OBJS) -L $(LIBFT) -lft
+	@$(CC) $(FLAGS) -o $(NAME) $(OBJS) -L $(LIBFT_DIR) -lft
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@$(CC) $(FLAGS) -c $< -I$(INC_DIR) -I$(LIBFT_H) -o $@
